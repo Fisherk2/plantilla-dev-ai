@@ -1,60 +1,137 @@
-# Contributing to Agent Skills
+# Contribuir
 
-Thanks for your interest in contributing! This project is a collection of production-grade engineering skills for AI coding agents.
+¡Gracias por tu interés en contribuir! Este proyecto es una colección de skills de ingeniería de grado de producción para agentes de codificación AI.
 
-## Adding a New Skill
+---
 
-1. Create a directory under `skills/` with a kebab-case name
-2. Add a `SKILL.md` following the format in [docs/skill-anatomy.md](docs/skill-anatomy.md)
-3. Include YAML frontmatter with `name` and `description` fields
-4. Ensure the `description` briefly says what the skill does (third person), then includes `Use when` trigger conditions
+## Añadir una Nueva Skill
 
-### Skill Quality Bar
+1. Crea un directorio bajo `skills/` con un nombre en kebab-case
+2. Añade un `SKILL.md` siguiendo el formato en [docs/ai-agent-setup/skill-anatomy.md](docs/ai-agent-setup/skill-anatomy.md)
+3. Incluye frontmatter YAML con los campos `name` y `description`
+4. Asegúrate de que la `description` indique brevemente qué hace la skill (tercera persona), seguida de las condiciones de activación "Use when"
 
-Skills should be:
+### Estándar de Calidad de las Skills
 
-- **Specific** — Actionable steps, not vague advice
-- **Verifiable** — Clear exit criteria with evidence requirements
-- **Battle-tested** — Based on real engineering workflows, not theoretical ideals
-- **Minimal** — Only the content needed to guide the agent correctly
+Las skills deben ser:
 
-### Structure
+- **Específicas** — Pasos accionables, no consejos vagos
+- **Verificables** — Criterios de salida claros con requisitos de evidencia
+- **Probadas en batalla** — Basadas en flujos de trabajo de ingeniería reales, no ideales teóricos
+- **Mínimas** — Solo el contenido necesario para guiar al agente correctamente
 
-Every new skill must have:
+### Estructura
 
-- `SKILL.md` in the skill directory
-- YAML frontmatter with valid `name` and `description`
+Toda nueva skill debe tener:
 
-New skills should generally follow the standard anatomy:
+- `SKILL.md` en el directorio de la skill
+- Frontmatter YAML con `name` y `description` válidos
 
-- **Overview** — What this skill does and why it matters
-- **When to Use** — Triggering conditions
-- **Process** — Step-by-step workflow
-- **Common Rationalizations** — Excuses agents use to skip steps, with rebuttals
-- **Red Flags** — Warning signs that the skill is being applied incorrectly
-- **Verification** — How to confirm the skill was applied correctly
+Las nuevas skills deben seguir generalmente la anatomía estándar:
 
-### What Not to Do
+- **Overview** — Qué hace esta skill y por qué importa
+- **When to Use** — Condiciones de activación
+- **Process** — Flujo de trabajo paso a paso
+- **Common Rationalizations** — Excusas que los agentes usan para saltarse pasos, con refutaciones
+- **Red Flags** — Señales de advertencia de que la skill se está aplicando incorrectamente
+- **Verification** — Cómo confirmar que la skill se aplicó correctamente
 
-- Don't duplicate content between skills — reference other skills instead
-- Don't add skills that are vague advice instead of actionable processes
-- Don't create supporting files unless content exceeds 100 lines
-- Don't put reference material inside skill directories — use `references/` instead
+### Qué No Hacer
 
-## Modifying Existing Skills
+- No dupliques contenido entre skills — referencia otras skills en su lugar
+- No añadas skills que sean consejos vagos en lugar de procesos accionables
+- No crees archivos de soporte a menos que el contenido supere las 100 líneas
+- No pongas material de referencia dentro de los directorios de skills — usa `references/` en su lugar
 
-- Keep changes focused and minimal
-- Preserve the existing structure and tone
-- Test that YAML frontmatter remains valid after edits
+---
 
-## Reporting Issues
+## Añadir un Nuevo Agente
 
-Open an issue if you find:
+Para añadir un nuevo agente especializado, sigue estos pasos:
 
-- A skill that gives incorrect or outdated guidance
-- Missing coverage for a common engineering workflow
-- Inconsistencies between skills
+### Pasos
 
-## License
+1. Crea `agents/<nombre-agente>.md` con el mismo formato de frontmatter que los agentes existentes
+2. Define el rol, alcance, formato de salida y reglas
+3. Añade un bloque **Composition** al final (Invoke directly when / Invoke via / Do not invoke from another persona)
+4. Añade el agente a la tabla en [AGENTS_GUIDE.md](AGENTS_GUIDE.md)
+5. **Actualiza la sección `## Agent Personas` en [USER_GUIDE.md](USER_GUIDE.md)** con el nuevo agente
+6. Si el agente habilita un nuevo patrón de orquestación, documéntalo en `references/orchestration-patterns.md`
 
-By contributing, you agree that your contributions will be licensed under the MIT License.
+### Reglas para Agentes
+
+- Un agente es un único rol con un único formato de salida. Si necesitas un segundo rol, crea un segundo agente.
+- **Los agentes no invocan a otros agentes.** La composición es trabajo de los comandos o del usuario.
+- Un agente puede invocar skills (el *cómo*).
+- Todo archivo de agente termina con un bloque "Composition" indicando dónde encaja.
+
+### Estructura de un Agente
+
+```
+agents/
+  <nombre-agente>.md    # Formato frontmatter:
+                        # ---
+                        # name: nombre-agente
+                        # role: Título del rol
+                        # perspective: Perspectiva especializada
+                        # ---
+                        #
+                        # [Contenido del agente]
+                        #
+                        # ## Composition
+                        # [Dónde se invoca este agente]
+```
+
+### Ejemplo de Frontmatter
+
+```yaml
+---
+name: code-reviewer
+role: Senior Staff Engineer
+perspective: Realiza revisiones de código de cinco ejes con el estándar de un ingeniero senior
+---
+```
+
+### Agentes Existentes
+
+| Agente | Rol | Propósito |
+|--------|-----|----------|
+| [code-reviewer](agents/code-reviewer.md) | Senior Staff Engineer | Revisión de cinco ejes antes del merge |
+| [security-auditor](agents/security-auditor.md) | Security Engineer | Detección de vulnerabilidades, auditoría OWASP |
+| [test-engineer](agents/test-engineer.md) | QA Engineer | Estrategia de pruebas, análisis de cobertura, patrón Prove-It |
+
+### Qué No Hacer
+
+- No crear agentes que invoquen a otros agentes
+- No añadir múltiples roles en un solo agente
+- No duplicar funcionalidad existente
+
+### Referencias
+
+Para más información sobre orquestación de agentes, patrones válidos e inválidos, y ejemplos de composición, ver:
+- [AGENTS_GUIDE.md](AGENTS_GUIDE.md) — Guía completa de agentes y orquestación
+- [references/orchestration-patterns.md](references/orchestration-patterns.md) — Catálogo de patrones de orquestación
+
+---
+
+## Modificar Skills Existentes
+
+- Mantén los cambios enfocados y mínimos
+- Preserva la estructura y el tono existentes
+- Verifica que el frontmatter YAML siga siendo válido después de las ediciones
+
+---
+
+## Reportar Problemas
+
+Abre un issue si encuentras:
+
+- Una skill que da orientación incorrecta o desactualizada
+- Cobertura faltante para un flujo de trabajo de ingeniería común
+- Inconsistencias entre skills
+
+---
+
+## Licencia
+
+Al contribuir, aceptas que tus contribuciones serán licenciadas bajo la Licencia MIT.
