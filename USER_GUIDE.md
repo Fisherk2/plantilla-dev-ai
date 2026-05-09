@@ -87,6 +87,8 @@ This will install Context7 with official skill definitions. If you already have 
 
 For more details, see the [official installation guide](https://github.com/upstash/context7#installation).
 
+> **Important for CLI+Skills users:** After installing Context7, use the `find-docs` skill to fetch up-to-date documentation for any library, framework, SDK, or cloud service. This skill is automatically invoked when you ask about API syntax, configuration options, or how to use a specific technology.
+
 <details>
 <summary><b>Claude Code (recommended)</b></summary>
 
