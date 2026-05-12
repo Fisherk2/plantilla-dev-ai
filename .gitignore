@@ -108,4 +108,72 @@ config/*local*.yaml
 # Modulos de Node.js
 node_modules/
 
+# Docker y Contenedores - Excluye configuraciones de contenedores y orquestación
+.docker/
+docker-compose.override.yml
+*.kubeconfig
+kubeconfig*
+
+# Lenguajes Adicionales - Excluye artefactos de build y dependencias
+# Go
+vendor/
+*.exe
+*.test
+coverage.txt
+# Rust
+target/
+# Java/Maven
+*.class
+*.jar
+*.war
+target/
+.mvn/
+# Ruby
+vendor/bundle/
+.bundle/
+
+# Frameworks Web - Excluye directorios de build y archivos generados
+# Next.js
+.next/
+out/
+# Vite / Webpack
+dist/
+build/
+# Laravel
+storage/*.key
+# Django
+*.pot
+*.mo
+
+# Cloud e Infraestructura - Excluye credenciales y configuraciones de servicios
+# AWS
+.aws/credentials
+aws-config.json
+# SSH
+*.pem
+*.key
+# GCP
+*.json.key
+service-account*.json
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+override.tf
+
+# Testing y Coverage - Excluye reportes y caché de herramientas de testing
+.nyc_output/
+lcov.info
+*.lcov
+junit/
+test-results/
+allure-results/
+
+# Entornos Locales - Excluye configuraciones específicas de cada desarrollador
+local.properties
+local.gradle
+*.local
+*.override
+
 # Para añadir nueva regla: identificar categoría específica, evitar patrones demasiado amplios
