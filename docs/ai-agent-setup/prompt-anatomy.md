@@ -23,8 +23,6 @@
   - [**5. CI/CD Integration**](#5-cicd-integration)
     - [**5.1. GitHub Actions Example for Python**](#51-github-actions-example-for-python)
     - [**5.2. Validation of Agent-Generated Files**](#52-validation-of-agent-generated-files)
-  - [**Project-Specific Skills for Prompt Development**](#project-specific-skills-for-prompt-development)
-  - [**7. Change History**](#7-change-history)
 
 ---
 ## **1. Introduction**
@@ -344,37 +342,3 @@ Add an additional step in your pipeline to validate agent-generated files. For e
     mypy src/middlewares/jwt_bearer.py
     pytest tests/test_jwt_middleware.py
 ```
-
----
-## **Project-Specific Skills for Prompt Development**
-
-**For PLANNING Mode:**
-- [spec-driven-development](skills/spec-driven-development/SKILL.md) - Essential for creating detailed technical specifications before implementation. Use when defining file purpose, requirements, and architecture decisions.
-- [idea-refine](skills/idea-refine/SKILL.md) - Structured divergent/convergent thinking to refine concepts. Ideal for resolving ambiguities in the clarification questions phase.
-- [planning-and-task-breakdown](skills/planning-and-task-breakdown/SKILL.md) - Decompose complex requirements into implementable tasks with clear acceptance criteria.
-
-**For BUILD Mode:**
-- [incremental-implementation](skills/incremental-implementation/SKILL.md) - Implement thin vertical slices with proper test coverage. Follows the "one slice at a time" principle from planning to implementation.
-- [test-driven-development](skills/test-driven-development/SKILL.md) - Red-Green-Refactor methodology with test pyramid (80/15/5). Includes the Beyonce Rule for testable code.
-- [frontend-ui-engineering](skills/frontend-ui-engineering/SKILL.md) - For building production-quality user interfaces with component architecture and WCAG 2.1 AA accessibility.
-- [api-and-interface-design](skills/api-and-interface-design/SKILL.md) - Contract-first design with Hyrum's Law and One-Version Rule considerations.
-- [source-driven-development](skills/source-driven-development/SKILL.md) - Ground every implementation decision in official documentation to avoid outdated patterns.
-
-**For VALIDATION & QUALITY:**
-- [debugging-and-error-recovery](skills/debugging-and-error-recovery/SKILL.md) - Five-step triage process (reproduce → localize → reduce → fix → guard) for systematic error resolution.
-- [code-review-and-quality](skills/code-review-and-quality/SKILL.md) - Five-axis review (correctness, design, readability, security, performance) with change sizing guidelines.
-- [security-and-hardening](skills/security-and-hardening/SKILL.md) - OWASP Top 10 prevention with three-tier boundary system for security reviews.
-- [performance-optimization](skills/performance-optimization/SKILL.md) - Measure-first approach with Core Web Vitals targets and profiling workflows.
-
-**For WORKFLOW SUPPORT:**
-- [context-engineering](skills/context-engineering/SKILL.md) - Optimize agent context setup with rules files and MCP integrations for better prompt understanding.
-- [documentation-and-adrs](skills/documentation-and-adrs/SKILL.md) - Architecture Decision Records template and API documentation standards.
-- [git-workflow-and-versioning](skills/git-workflow-and-versioning/SKILL.md) - Trunk-based development with atomic commits (~100 lines) and commit-as-save-point pattern.
-
----
-## **7. Change History**
-
-| Date       | Version | Description                         | Author       |
-| ---------- | ------- | ----------------------------------- | ----------- |
-| 2026-05-07 | 1.0     | Initial version of PROMPT_GUIDE.md. | Fisherk2 |
-| 2026-05-08 | 1.1     | Translated to English.              | Fisherk2    |
