@@ -7,6 +7,56 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 
 ## [Sin Lanzar]
 
+## [1.2.0] - 2026-05-13
+
+### Agregado
+
+#### Nuevas Skills de UI/UX (2 skills + 13 referencias + CLI tool)
+
+**Skills:**
+- `ui-ux-design-pro` - Skill senior de diseño UI/UX para interfaces premium production
+- `design-taste-frontend` - Skill de UI/UX Engineer senior
+
+**Referencias Técnicas (13 documentos):**
+- `references/accessibility.md` - Accesibilidad WCAG 2.1 AA
+- `references/animation-and-motion.md` - Animaciones y movimiento
+- `references/cognitive-principles.md` - Principios cognitivos
+- `references/color-system.md` - Sistema de colores
+- `references/component-patterns.md` - Patrones de componentes
+- `references/critique-protocol.md` - Protocolo de crítica
+- `references/depth-and-elevation.md` - Profundidad y elevación
+- `references/design-directions.md` - Direcciones de diseño
+- `references/icon-patterns.md` - Patrones de iconos
+- `references/real-world-patterns.md` - Patrones del mundo real
+- `references/spacing-and-layout.md` - Espaciado y layout
+- `references/token-architecture.md` - Arquitectura de tokens
+- `references/typography.md` - Tipografía
+
+**CLI Tool Integrado:**
+- `skills/ui-ux-design-pro/cli/` - Herramienta CLI con comandos:
+  - `audit` - Auditoría de interfaces
+  - `generate` - Generación de componentes
+  - `icons` - Búsqueda de iconos
+  - `search` - Búsqueda de patrones de diseño
+- 40+ archivos CSV con patrones de diseño y stacks tecnológicos
+- Casos de prueba para fintech y SaaS
+
+**Agente de Análisis Mejorado:**
+- Integración robusta de Context7 para fetch de documentación
+- Cuestionario refinado antes del modo build
+- Optimización de carga de tokens en sesiones
+- Pregunta de actualización de documentación tras modo build
+
+### Cambiado
+
+- `CONTRIBUTING.md` - Añadido paso para actualizar documentación al añadir o eliminar skills
+- Documentación de skills - Actualizado conteo de skills disponibles (29 total)
+- Tabla de agentes en reglas de contribución - Actualizada
+
+### Corregido
+
+- Hipervínculos que no apuntaban a ningún destino del proyecto
+
 ## [1.1.2] - 2026-05-12
 
 ### Agregado
