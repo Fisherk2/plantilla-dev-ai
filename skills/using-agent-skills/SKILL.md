@@ -41,7 +41,9 @@ Task arrives
     ├── Designing backend architecture? ─→ clean-ddd-hexagonal
     ├── Improving README? ───────────────→ crafting-effective-readmes
     ├── Solving design problems? ────────→ design-patterns
-    └── Applying SOLID/clean code? ──────→ solid
+    ├── Validating visual consistency? ──→ design-taste-frontend
+    ├── Applying SOLID/clean code? ──────→ solid
+    └── Designing professional UI/UX? ───→ ui-ux-design-pro
 ```
 
 ## Core Operating Behaviors
@@ -185,4 +187,6 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 | Extra | clean-ddd-hexagonal | Clean Architecture + DDD + Hexagonal patterns |
 | Extra | crafting-effective-readmes | README writing tailored to audience (OSS, internal, config) |
 | Extra | design-patterns | GoF and enterprise design patterns for recurring problems |
+| Extra | design-taste-frontend | Metric-based visual consistency rules to override default LLM biases |
 | Extra | solid | SOLID principles, TDD, clean code, professional software design |
+| Extra | ui-ux-design-pro | Professional UI/UX design with design systems, tokens, palettes, and high-fidelity prototyping |

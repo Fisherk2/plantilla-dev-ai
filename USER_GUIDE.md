@@ -203,7 +203,9 @@ Additional skills that extend the template across multiple phases. Skill Extras 
 | [clean-ddd-hexagonal](skills/clean-ddd-hexagonal/SKILL.md) | Combine Clean Architecture, DDD tactical patterns, and Hexagonal ports/adapters | Designing APIs, microservices, or complex backend domains |
 | [crafting-effective-readmes](skills/crafting-effective-readmes/SKILL.md) | Write or improve READMEs matching your audience (OSS, internal, personal, config) | Writing or improving README files |
 | [design-patterns](skills/design-patterns/SKILL.md) | Apply GoF and enterprise design patterns matching the problem context | Solving recurring design problems, refactoring, or reviewing structure |
+| [design-taste-frontend](skills/design-taste-frontend/SKILL.md) | Define criterios de buen gusto y consistencia visual en frontend con reglas métricas | Cuando necesitas validar decisiones de estilo y coherencia visual |
 | [solid](skills/solid/SKILL.md) | Apply SOLID principles, TDD, clean code, and professional software design | Writing, refactoring, or reviewing any code |
+| [ui-ux-design-pro](skills/ui-ux-design-pro/SKILL.md) | Diseño UI/UX profesional con sistemas de diseño, tokens, paletas y prototipado de alta fidelidad | Cuando necesitas diseñar interfaces atractivas, accesibles y centradas en el usuario |
 
 ---
 
@@ -325,7 +327,9 @@ plantilla-dev-ai/
 │   ├── clean-ddd-hexagonal/             #   Skill Extra: Clean Architecture + DDD + Hexagonal
 │   ├── crafting-effective-readmes/      #   Skill Extra: README writing guidance
 │   ├── design-patterns/                 #   Skill Extra: GoF and enterprise patterns
-│   └── solid/                           #   Skill Extra: SOLID principles and clean code
+│   ├── design-taste-frontend/          #   Skill Extra: metric-based visual consistency rules
+│   ├── solid/                           #   Skill Extra: SOLID principles and clean code
+│   └── ui-ux-design-pro/               #   Skill Extra: professional UI/UX design workflows
 ├── agents/                              # 4 specialist personas
 │   ├── code-reviewer.md                 #   Senior Staff Engineer
 │   ├── security-auditor.md              #   Security Engineer
