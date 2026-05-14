@@ -427,7 +427,7 @@ Skills bake in best practices from Google's engineering culture — including co
 
 Skills should be **specific** (actionable steps, not vague advice), **verifiable** (clear exit criteria with evidence requirements), **battle-tested** (based on real workflows), and **minimal** (only what's needed to guide the agent).
 
-See [docs/skill-anatomy.md](docs/skill-anatomy.md) for the format specification and [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+See [docs/ai-agent-setup/skill-anatomy.md](docs/ai-agent-setup/skill-anatomy.md) for the format specification and [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
@@ -452,7 +452,6 @@ For specialized topics, see these guides:
 | Document | Covers |
 |----------|--------|
 | [AGENTS_GUIDE.md](AGENTS_GUIDE.md) | How agent personas work, orchestration patterns, and decision matrix |
-| [agents/README.md](agents/README.md) | Agent personas decision matrix |
 | [references/orchestration-patterns.md](references/orchestration-patterns.md) | Full pattern catalog for agent orchestration |
 
 ### Platform Setup
